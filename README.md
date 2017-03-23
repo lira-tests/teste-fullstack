@@ -1,13 +1,13 @@
 # Teste fullstack
 
-Estimar as horas para o desenvolvimento e colocar tudo no seu Github.
+Leia primeiro todo o projeto, faça sua estimativa de horas para o desenvolvimento e envie um email com o título `[Teste Fullstack] Estimativa` para lagden@textecnologia.com.br
 
+Quando finalizar o teste, publique tudo no seu [Github](https://github.com) e envie um email com o título `[Teste Fullstack] Finalizado` para lagden@textecnologia.com.br
 
 ## Missão backend
 
 Desenvolver uma **API JSON RESTful** em **Python** ou **Go** ou **Node** ou **PHP**, que utilize todos os métodos (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).  
-E faça o teste unitário da **API**.
-
+Faça o teste unitário da **API** (Bônus :star:)
 ### Especificação
 
 Monte um catálogo de veículo com a seguinte estrutura:
