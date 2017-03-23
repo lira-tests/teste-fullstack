@@ -75,15 +75,13 @@ Desenvolver uma **UI (User Interface)**.
 
 - Cross browser support (IE11+)
 - Consumir **API** criada acima
-- Criar uma tela que tenha:
+- Criar uma tela que tenha...
     - Listagem de veículos
     - Formulário de criação ou edição de veículos
     - Detalhe do veículo
     - Busca
     
-O desenho está na pasta layout.
-
-Utilize as tecnologias que você conhece.
+O desenho está na pasta [layout](https://github.com/TExTecnologia/teste-fullstack/tree/master/layout)
 
 ### Dica (opcional)
 
@@ -93,3 +91,6 @@ Utilize algum framework para auxiliar no desenvolvimento da interface, por exemp
 - http://getbootstrap.com/css/
 - http://foundation.zurb.com/
 
+## Dúvida
+
+Se tiver qualquer dúvida sobre esse teste, envie um email com o título `[Teste Fullstack] O assunto que vc deseja` para lagden@textecnologia.com.br
