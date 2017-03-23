@@ -83,7 +83,7 @@ Desenvolver uma **UI (User Interface)**.
     
 O desenho está na pasta [layout](https://github.com/TExTecnologia/teste-fullstack/tree/master/layout)
 
-### Dica (opcional)
+### Dica
 
 Utilize algum framework para auxiliar no desenvolvimento da interface, por exemplo:
 
