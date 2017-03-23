@@ -69,7 +69,7 @@ Apaga o veículo
 
 ## Missão frontend
 
-Desenvolver uma **UI (User Interface)**.
+Desenvolver uma **UI (User Interface)** de acordo com o desenho que está na pasta [layout](https://github.com/TExTecnologia/teste-fullstack/tree/master/layout)
 
 ### Especificação
 
@@ -77,11 +77,9 @@ Desenvolver uma **UI (User Interface)**.
 - Consumir **API** criada acima
 - Criar uma tela que tenha...
     - Listagem de veículos
-    - Formulário de criação ou edição de veículos
     - Detalhe do veículo
     - Busca
-    
-O desenho está na pasta [layout](https://github.com/TExTecnologia/teste-fullstack/tree/master/layout)
+    - Formulário de novo/edição de veículos
 
 ### Dica
 
