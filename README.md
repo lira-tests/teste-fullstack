@@ -10,7 +10,7 @@ Desenvolver uma **API JSON RESTful** em **Python** ou **Go** ou **Node** ou **PH
 Faça o teste unitário da **API** (Bônus :star:)
 ### Especificação
 
-Monte um catálogo de veículo com a seguinte estrutura:
+Monte uma base de veículo com a seguinte estrutura:
 
 ```
 veiculo:   string
