@@ -2,7 +2,7 @@
 
 Leia primeiro todo o projeto, faça sua estimativa de horas para o desenvolvimento e envie um email com o título `[Teste Fullstack] Estimativa` para lagden@textecnologia.com.br
 
-Quando finalizar o teste, publique tudo no seu [Github](https://github.com) e envie um email com o título `[Teste Fullstack] Finalizado` para lagden@textecnologia.com.br
+Quando finalizar o teste, publique tudo no seu [Github](https://github.com) e envie um email com o título `[Teste Fullstack] Finalizado` para rh@textecnologia.com.br
 
 ## Missão backend
 
