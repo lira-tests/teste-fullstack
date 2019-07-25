@@ -1,13 +1,12 @@
 # Teste fullstack
 
-Leia primeiro todo o projeto, faça sua estimativa de horas para o desenvolvimento e envie um email com o título `[Teste Fullstack] Estimativa` para lagden@textecnologia.com.br
-
-Quando finalizar o teste, publique tudo no seu [Github](https://github.com) e envie um email com o título `[Teste Fullstack] Finalizado` para rh@textecnologia.com.br
+Quando finalizar o teste, publique tudo no seu [Github](https://github.com) e envie um email com o título `[Teste Fullstack] Finalizado` para marco.anjos@dasa.com.br
 
 ## Missão backend
 
 Desenvolver uma **API JSON RESTful** em **Python** ou **Go** ou **Node** ou **PHP**, que utilize todos os métodos (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).  
-Faça o teste unitário da **API** (Bônus :star:)
+Faça o teste unitário da **API**
+Adicione uma camada de cache com Redis ou Memcache **API** (Bônus :star:)
 ### Especificação
 
 Monte uma base de veículo com a seguinte estrutura:
@@ -69,7 +68,7 @@ Apaga o veículo
 
 ## Missão frontend
 
-Desenvolver uma **UI (User Interface)** de acordo com o desenho que está na pasta [layout](https://github.com/TExTecnologia/teste-fullstack/tree/master/layout)
+Desenvolver uma **UI (User Interface)** de acordo com o desenho que está na pasta [layout](https://github.com/marcoaure/teste-fullstack/tree/master/layout)
 
 ### Especificação
 
@@ -91,4 +90,4 @@ Utilize algum framework para auxiliar no desenvolvimento da interface, por exemp
 
 ## Dúvida
 
-Se tiver qualquer dúvida sobre esse teste, envie um email com o título `[Teste Fullstack] O assunto que vc deseja` para lagden@textecnologia.com.br
+Se tiver qualquer dúvida sobre esse teste, envie um email com o título `[Teste Fullstack] O assunto que vc deseja` para marco.anjos@dasa.com.br
