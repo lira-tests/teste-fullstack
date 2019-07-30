@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server/index.js",
+    "test": "NODE_ENV=test PORT=4000 ./node_modules/mocha/bin/_mocha --exit ./test/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "Fernando Lira",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.19.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-redis": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0"
+  }
+}
