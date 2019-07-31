@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="clearfix mt-4">
+    <h4 class="float-left">VEÍCULO</h4>
+    <button class="btn fa fa-lg fa-plus-circle float-right"></button>
+  </div>
+  <hr />
+  <div>
+    <div>
+      <p *ngIf=" Vehicle.length <=0" class="no-data text-center">Sem veículos cadastrados</p>
+    </div>
+    <div class="row" *ngIf="Vehicle.length > 0">
+      <div class="col-sm">
+        <h6>Lista de veículos</h6>
+        <div class="clearfix m-2 p-2" *ngFor="let vehicle of Vehicle; let i = index" (click)="setClickedRow(i, vehicle)"
+          [class.bg-light]="i == selectedRow" [class.bg-white]="i != selectedRow">
+          <div class="float-left">
+            <span class="clearfix">{{vehicle.manufacturer}}</span>
+            <span class="clearfix text-success">{{vehicle.name}}</span>
+            <span class="clearfix text-muted">{{vehicle.year}}</span>
+          </div>
+          <div class="float-right mt-4 mr-2">
+            <i class="fa fa-tag fa-2x sold" [class.text-success]="vehicle.sold == 0"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <h6>Detalhes</h6>
+        <div class="" *ngIf="selectedVehicle.id > 0">
+          <div class="bg-light p-2">
+            <div>
+              <h5 class="text-success">{{selectedVehicle.name}}</h5>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="font-weight-bold">Marca</div>
+                <div>{{selectedVehicle.manufacturer}}</div>
+              </div>
+              <div class="col-sm">
+                <div class="font-weight-bold">Ano</div>
+                <div>{{selectedVehicle.year}}</div>
+              </div>
+            </div>
+            <div>
+              {{selectedVehicle.description}}
+            </div>
+          </div>
+          <div class="bg-light mt-1 p-2 clearfix">
+            <div class="float-left">
+              <button class="btn bg-dark text-white text-uppercase pr-4"><i
+                  class="fa fa-pencil fa-sm p-2 "></i>Editar</button>
+            </div>
+            <div class="float-right">
+              <i class="fa fa-tag fa-sm mt-2 p-2" [class.text-success]="selectedVehicle.sold == 0"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
