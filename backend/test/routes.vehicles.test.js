@@ -22,7 +22,7 @@ describe('routes : vehicles', () => {
           res.type.should.equal('application/json');
           res.body.status.should.eql('success');
           res.body.data[0].should.include.keys(
-            'id', 'vehicle', 'manufacturer', 'fipe_code', 'sold',
+            'id', 'name', 'manufacturer', 'description', 'sold'
           );
           done();
         });
@@ -40,7 +40,7 @@ describe('routes : vehicles', () => {
           res.type.should.equal('application/json');
           res.body.status.should.eql('success');
           res.body.data[0].should.include.keys(
-            'id', 'vehicle', 'manufacturer', 'fipe_code', 'sold',
+            'id', 'name', 'manufacturer', 'description', 'sold',
           );
           done();
         });
@@ -65,9 +65,9 @@ describe('routes : vehicles', () => {
       chai.request(server)
         .post('/api/v1/vehicles')
         .send({
-          "vehicle": "Vehicle Test",
+          "name": "Vehicle Test",
           "manufacturer": "Test Ind",
-          "fipe_code": "099999-9",
+          "description": "Test",
           "sold": true
         })
         .end((err, res) => {
@@ -104,9 +104,9 @@ describe('routes : vehicles', () => {
           chai.request(server)
             .put(`/api/v1/vehicles/${vehicleObject.id}`)
             .send({
-              "vehicle": "Vehicle Test Put",
+              "name": "Vehicle Test Put",
               "manufacturer": "Test Ind Put",
-              "fipe_code": "099999-7",
+              "description": "Description test -7",
               "sold": false
             })
             .end((err, res) => {

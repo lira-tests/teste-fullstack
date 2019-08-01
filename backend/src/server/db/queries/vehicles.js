@@ -13,8 +13,7 @@ function getById(id) {
 
 function add(vehicle) {
   return knex('vehicles')
-    .insert(vehicle)
-    .onDuplicateUpdate('vehicle');
+    .insert(vehicle);
 }
 
 function update(id, vehicle) {

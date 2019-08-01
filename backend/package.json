@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "knex": "^0.19.1",
-    "knex-on-duplicate-update": "^1.0.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-cors": "0.0.16",
