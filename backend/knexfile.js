@@ -8,7 +8,7 @@ module.exports = {
   test: {
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
+      host: 'database',
       user: 'root',
       password: 'root',
       database: 'vehicles_api_test'

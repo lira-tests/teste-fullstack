@@ -18,8 +18,25 @@ As especificações e fixtures pode ser vistas [aqui](documents/README.md).
 
 ### Ferramentas
 
-| Backend | Frontend | DevOps         |
-| ------- | -------- | -------------- |
-| Koa.js  | ?        | Docker         |
-| MySQL   | ?        | Docker Compose |
-| Knex    | ?        | Makefile       |
+| Backend | Frontend  | DevOps         |
+| ------- | --------- | -------------- |
+| Koa.js  | Angular   | Docker         |
+| MySQL   | Bootstrap | Docker Compose |
+| Knex    |           | Makefile       |
+
+
+### Como rodar o projeto
+
+#### Os testes
+
+A camada de backend conta com testes do tipo integração, testando as respostas das API e se o retorno é válido.
+
+```bash
+docker exec -it database mysql -proot -e 'DROP DATABASE vehicles_api_test;CREATE DATABASE vehicles_api_test'
+```
+
+Depois execute os testes:
+
+```bash
+docker exec -it backend npm run test
+```
