@@ -1,17 +1,5 @@
 version: '3.7'
 services:
-  backend:
-    image: node:10-alpine
-    container_name: backend
-    build: ./backend/
-    command: "npm run start"
-    environment:
-      PORT: 4100
-    volumes:
-      - ./backend:/app
-    ports:
-      - "4100:4100"
-
   database:
     image: mysql
     container_name: database
@@ -24,6 +12,28 @@ services:
       - database:/var/lib/mysql
     ports:
       - "3306:3306"
+
+  backend:
+    image: node:10-alpine
+    container_name: backend
+    volumes:
+      - ./backend/:/app
+    working_dir: /app
+    command: sh ./start.sh
+    environment:
+      PORT: 4100
+    ports:
+      - "4100:4100"
+
+  frontend:
+    image: node:10-alpine
+    container_name: frontend
+    volumes:
+      - ./frontend/:/app
+    working_dir: /app
+    command: sh start.sh
+    ports:
+      - "4200:4200"
 
 volumes:
   database:

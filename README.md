@@ -31,12 +31,15 @@ As especificações e fixtures pode ser vistas [aqui](documents/README.md).
 
 A camada de backend conta com testes do tipo integração, testando as respostas das API e se o retorno é válido.
 
-```bash
-docker exec -it database mysql -proot -e 'DROP DATABASE vehicles_api_test;CREATE DATABASE vehicles_api_test'
-```
+Criei um arquivo `Makefile` na raiz com alguns comandos, só rodar `make` eles serão exibidos.
 
-Depois execute os testes:
+##### Rodando
 
-```bash
-docker exec -it backend npm run test
-```
+- Executar `docker-compose up -d`
+  - Obs. o MySQL pode demorar para iniciar, pode ser preciso rodar duas vezes o `up`
+- Criar a estrutura de banco de dados `make backend-start-database`
+- Acessando:
+  - Frontend: http://localhost:4200
+  - Backend: http://localhost:4100
+- Obs. Pode correr algum problema e precisar rodar um `npm install` no diretório backend e/our frontend
+
