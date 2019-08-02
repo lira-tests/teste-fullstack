@@ -14,7 +14,18 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getVehicles() {
-    return this.http.get(`${this.baseUri}`);
+    return this.http.get(this.baseUri);
   }
 
+  getVehicle(id) {
+    return this.http.get(`${this.baseUri}/${id}`);
+  }
+
+  addVehicle(vehicle) {
+    return this.http.post(this.baseUri, vehicle);
+  }
+
+  updateVehicle(id, vehicle) {
+    return this.http.put(`${this.baseUri}/${id}`, vehicle);
+  }
 }

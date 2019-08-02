@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   selectedVehicle: Vehicle = { id: 0, name: '', manufacturer: '', year: 0, description: '', sold: false };
 
   constructor(private apiService: ApiService) {
-    this.readVehicle();
     this.setClickedRow = (index, vehicle) => {
       this.selectedRow = index;
       this.selectedVehicle = vehicle;
@@ -23,6 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.readVehicle();
   }
 
   readVehicle() {

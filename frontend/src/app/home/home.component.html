@@ -2,7 +2,9 @@
 <div class="container">
   <div class="clearfix mt-4">
     <h4 class="float-left">VEÍCULO</h4>
-    <button class="btn fa fa-lg fa-plus-circle float-right"></button>
+    <a routerLink="veiculo/novo" class="float-right text-dark" routerLinkActive="active">
+      <i class="fa fa-2x fa-plus-circle text-dark"></i>
+    </a>
   </div>
   <hr />
   <div>
@@ -47,8 +49,9 @@
           </div>
           <div class="bg-light mt-1 p-2 clearfix">
             <div class="float-left">
-              <button class="btn bg-dark text-white text-uppercase pr-4"><i
-                  class="fa fa-pencil fa-sm p-2 "></i>Editar</button>
+              <a [routerLink]="['/veiculo/editar', selectedVehicle.id]"
+                class="btn bg-dark text-white text-uppercase pr-4">
+                <i class="fa fa-pencil fa-sm p-2 "></i>Editar</a>
             </div>
             <div class="float-right">
               <i class="fa fa-tag fa-sm mt-2 p-2" [class.text-success]="selectedVehicle.sold == 0"></i>
@@ -58,5 +61,4 @@
       </div>
     </div>
   </div>
-
   <router-outlet></router-outlet>

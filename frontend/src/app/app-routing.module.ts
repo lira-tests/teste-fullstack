@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { VehicleAddComponent } from './vehicle-add/vehicle-add.component';
+import { VehicleEditComponent } from './vehicle-edit/vehicle-edit.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
@@ -9,7 +11,15 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'search',
+    path: 'veiculo/novo',
+    component: VehicleAddComponent
+  },
+  {
+    path: 'veiculo/editar/:id',
+    component: VehicleEditComponent
+  },
+  {
+    path: 'busca',
     component: SearchComponent
   }
 ];
@@ -19,3 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

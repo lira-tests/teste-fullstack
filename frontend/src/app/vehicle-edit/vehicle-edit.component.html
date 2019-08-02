@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="clearfix mt-4">
+    <h4 class="float-left">NOVO VEÍCULO</h4>
+  </div>
+  <hr />
+  <form [formGroup]="vehicleForm" novalidate (ngSubmit)="onSubmit(vehicleForm.value)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">
+          Veículo
+        </label>
+        <input id="name" class="form-control" type="text" formControlName="name" [(ngModel)]="vehicle.name">
+        <div
+          *ngIf="vehicleForm.controls['name'].invalid && (vehicleForm.controls['name'].dirty || vehicleForm.controls['name'].touched)"
+          class="alert alert-danger m-2">
+          <div *ngIf="vehicleForm.controls['name'].errors.required">
+            Preencha o nome do veículo.
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="manufacturer">
+          Marca
+        </label>
+        <input id="manufacturer" class="form-control" type="text" formControlName="manufacturer"
+          [(ngModel)]="vehicle.manufacturer">
+        <div
+          *ngIf="vehicleForm.controls['manufacturer'].invalid && (vehicleForm.controls['manufacturer'].dirty || vehicleForm.controls['manufacturer'].touched)"
+          class="alert alert-danger m-2">
+          <div *ngIf="vehicleForm.controls['manufacturer'].errors.required">
+            Preencha a marca do veículo.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="year">
+          Ano
+        </label>
+        <input type="text" class="form-control" placeholder="yyyy" name="year" formControlName="year"
+          [(ngModel)]="vehicle.year">
+        <div
+          *ngIf="vehicleForm.controls['year'].invalid && (vehicleForm.controls['year'].dirty || vehicleForm.controls['year'].touched)"
+          class="alert alert-danger m-2">
+          <div *ngIf="vehicleForm.controls['year'].errors.pattern">
+            Preencha um ano válido.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="sold">
+          Vendido?
+        </label>
+        <input id="sold" class="form-control" type="checkbox" formControlName="sold" [(ngModel)]="vehicle.sold">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">
+        Descrição
+      </label>
+      <textarea name="description" class="form-control" formControlName="description"
+        [(ngModel)]="vehicle.description"></textarea>
+    </div>
+    <div
+      *ngIf="vehicleForm.controls['description'].invalid && (vehicleForm.controls['description'].dirty || vehicleForm.controls['description'].touched)"
+      class="alert alert-danger">
+      <div *ngIf="vehicleForm.controls['description'].errors.required">
+        Preencha um ano válido.
+      </div>
+    </div>
+    <button class="btn btn-dark mb-2" type="submit" [disabled]="vehicleForm.invalid">Enviar</button>
+  </form>
+</div>

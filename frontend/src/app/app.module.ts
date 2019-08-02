@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -9,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ApiService } from './service/api.service';
 import { SearchComponent } from './search/search.component';
+import { VehicleAddComponent } from './vehicle-add/vehicle-add.component';
+import { VehicleEditComponent } from './vehicle-edit/vehicle-edit.component';
 
 
 @NgModule({
@@ -16,13 +19,17 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    VehicleAddComponent,
+    VehicleEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ApiService
