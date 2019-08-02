@@ -35,11 +35,13 @@ Criei um arquivo `Makefile` na raiz com alguns comandos, só rodar `make` eles s
 
 ##### Rodando
 
-- Executar `docker-compose up -d`
+- Executar `docker-compose up -d` ou `make up`
   - Obs. o MySQL pode demorar para iniciar, pode ser preciso rodar duas vezes o `up`
 - Criar a estrutura de banco de dados `make backend-start-database`
 - Acessando:
   - Frontend: http://localhost:4200
   - Backend: http://localhost:4100
+- Rodando os testes
+  - `make backend-test`
 - Obs. Pode correr algum problema e precisar rodar um `npm install` no diretório backend e/our frontend
 

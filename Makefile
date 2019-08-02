@@ -8,6 +8,9 @@ start: ## Start all aplications
 stop: ## Stop all aplications
 	@docker-compose stop
 
+up: ## Start all aplications and sent to background
+	@docker-compose up -d
+
 backend-start-database: ## Clean and create database
 	@docker exec -it database mysql -proot -e 'DROP DATABASE vehicles_api;CREATE DATABASE vehicles_api'
 	@docker exec -it database mysql -proot -e 'DROP DATABASE vehicles_api_test;CREATE DATABASE vehicles_api_test'
