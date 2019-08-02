@@ -20,6 +20,33 @@ router.get(BASE_URL, async (ctx) => {
   }
 })
 
+router.get(`${BASE_URL}/find`, async (ctx) => {
+  try {
+    const param = ctx.query.q || '';
+    const vehicles = await queries.getByName(param);
+
+    if (vehicles.length) {
+      ctx.status = 200;
+      ctx.body = {
+        status: 'success',
+        data: vehicles
+      };
+    } else {
+      ctx.status = 404;
+      ctx.body = {
+        status: 'error',
+        message: 'Vehicle not found.'
+      };
+    }
+  } catch (err) {
+    ctx.status = 400;
+    ctx.body = {
+      status: 'erroddr',
+      message: err.message || 'Sorry, an error has occurred.'
+    };
+  }
+})
+
 router.get(`${BASE_URL}/:id`, async (ctx) => {
   try {
     const vehicle = await queries.getById(ctx.params.id);

@@ -24,8 +24,14 @@ function update(id, vehicle) {
 
 function remove(id) {
   return knex('vehicles')
-  .del()
-  .where({ id: parseInt(id) });
+    .del()
+    .where({ id: parseInt(id) });
+}
+
+function getByName(name) {
+  return knex('vehicles')
+    .select('*')
+    .where('name', 'like', `%${name}%`);
 }
 
 module.exports = {
@@ -33,5 +39,6 @@ module.exports = {
   getById,
   add,
   update,
-  remove
+  remove,
+  getByName
 };

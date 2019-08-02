@@ -255,4 +255,51 @@ describe('routes : vehicles', () => {
     });
   });
 
+  describe('GET /api/v1/vehicles/find', () => {
+    it('should return all vehicles', (done) => {
+      chai.request(server)
+        .get('/api/v1/vehicles/find')
+        .end((err, res) => {
+          should.not.exist(err);
+          res.status.should.equal(200);
+          res.type.should.equal('application/json');
+          res.body.status.should.eql('success');
+          res.body.data[0].should.include.keys(
+            'id', 'name', 'manufacturer', 'description', 'sold'
+          );
+          done();
+        });
+    });
+
+    it('should return a vehicle', (done) => {
+      chai.request(server)
+        .get('/api/v1/vehicles/find?q=taurus')
+        .end((err, res) => {
+          should.not.exist(err);
+          res.status.should.equal(200);
+          res.type.should.equal('application/json');
+          res.body.status.should.eql('success');
+          res.body.data[0].should.include.keys(
+            'id', 'name', 'manufacturer', 'description', 'sold'
+          );
+          done();
+        });
+    });
+
+    it('should return error 404', (done) => {
+      chai.request(server)
+        .get('/api/v1/vehicles/find?q=error')
+        .end((err, res) => {
+          should.not.exist(err);
+          res.status.should.equal(404);
+          res.type.should.equal('application/json');
+          res.body.status.should.eql('error');
+          done();
+        });
+    });
+
+
+  });
+
+
 });
