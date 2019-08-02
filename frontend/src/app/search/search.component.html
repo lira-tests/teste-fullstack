@@ -10,8 +10,7 @@
     </div>
     <div class="row" *ngIf="vehicles.length > 0">
       <div class="col-sm">
-        <div class="clearfix m-2 p-2" *ngFor="let vehicle of vehicles; let i = index"
-          (click)="setClickedRow(i, vehicle)" [class.bg-light]="i == selectedRow" [class.bg-white]="i != selectedRow">
+        <div class="clearfix m-2 p-2" *ngFor="let vehicle of vehicles; let i = index">
           <div class="float-left">
             <span class="clearfix">{{vehicle.manufacturer}}</span>
             <span class="clearfix text-success">{{vehicle.name}}</span>
