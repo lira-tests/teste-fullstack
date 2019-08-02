@@ -1,1 +1,26 @@
-<p>search works!</p>
+<div class="container">
+  <div class="clearfix mt-4">
+    <h4 class="float-left">BUSCA</h4>
+  </div>
+  <hr />
+  <div>
+    <div>
+      <p *ngIf=" vehicles.length <=0" class="no-data text-center">Nenhum veículo encontrado por <i>{{ vehicleName }}</i>
+      </p>
+    </div>
+    <div class="row" *ngIf="vehicles.length > 0">
+      <div class="col-sm">
+        <div class="clearfix m-2 p-2" *ngFor="let vehicle of vehicles; let i = index"
+          (click)="setClickedRow(i, vehicle)" [class.bg-light]="i == selectedRow" [class.bg-white]="i != selectedRow">
+          <div class="float-left">
+            <span class="clearfix">{{vehicle.manufacturer}}</span>
+            <span class="clearfix text-success">{{vehicle.name}}</span>
+            <span class="clearfix text-muted">{{vehicle.year}}</span>
+          </div>
+          <div class="float-right mt-4 mr-2">
+            <i class="fa fa-tag fa-2x sold" [class.text-success]="vehicle.sold == 0"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

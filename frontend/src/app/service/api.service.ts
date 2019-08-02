@@ -21,6 +21,11 @@ export class ApiService {
     return this.http.get(`${this.baseUri}/${id}`);
   }
 
+
+  getVehicleByName(name) {
+    return this.http.get(`${this.baseUri}/find?q=${name}`);
+  }
+
   addVehicle(vehicle) {
     return this.http.post(this.baseUri, vehicle);
   }

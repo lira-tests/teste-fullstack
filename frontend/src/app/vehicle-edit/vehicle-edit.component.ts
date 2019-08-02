@@ -30,8 +30,7 @@ export class VehicleEditComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.vehicleId = params['id'];
-      this.apiService.getVehicle(this.vehicleId).subscribe(res => {
-        console.log(res);
+      this.apiService.getVehicle(this.vehicleId).subscribe((res: any) => {
         this.vehicle = res.data[0];
       });
     });
@@ -57,7 +56,6 @@ export class VehicleEditComponent implements OnInit {
     };
 
     this.apiService.updateVehicle(this.vehicleId, vehicle).subscribe(res => {
-      console.log('voltou', res);
       this.router.navigate(['']);
     });
   }
