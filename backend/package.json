@@ -13,7 +13,7 @@
   "author": "Fernando Lira",
   "license": "ISC",
   "dependencies": {
-    "knex": "^0.19.1",
+    "knex": "^2.4.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-cors": "0.0.16",
